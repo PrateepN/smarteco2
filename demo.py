@@ -5,13 +5,8 @@ from flask_ask import Ask, statement, question
 
 
 app = Flask(__name__)
-ask = Ask(app, "/webhook2")
-log = logging.getLogger()
-log.addHandler(logging.StreamHandler())
-log.setLevel(logging.DEBUG)
-logging.getLogger("flask_ask").setLevel(logging.DEBUG)
-
-
+@app.route('/webhook2', methods=['POST'])
+ask = Ask(app, "/")
 @ask.launch
 def launch():
     return statement("Welcome to the requests demo")
