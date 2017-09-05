@@ -33,10 +33,19 @@ def webhook():
     return r
 
 @ask.launch
-def launched():
-    return statement('Hello, world')
-	
+def launch():
+    return statement("Welcome to the requests demo")
 
+
+@ask.intent("HelloIntent")
+def hello():
+    return question("Who do you want me to say hello to?")
+
+
+@ask.intent("AMAZON.StopIntent")
+def stop():
+    return statement("Stopping")
+	
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
