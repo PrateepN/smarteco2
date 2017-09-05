@@ -34,7 +34,7 @@ def webhook():
 
 @ask.launch
 def launched():
-    return question('Welcome to Foo')	
+    return statement('Hello, world')
 	
 
 
