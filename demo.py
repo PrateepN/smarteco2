@@ -2,7 +2,7 @@ import logging
 
 from flask import Flask
 from flask_ask import Ask, statement, question
-
+from flask import jsonify
 
 app = Flask(__name__)
 @app.route('/webhook2', methods=['POST'])
@@ -15,8 +15,7 @@ response="We are working on that"
 	
 @ask.intent("Premium_amount")
 def hello():
-	print(json.dumps(response))
-    return question("Who do you want me to say hello to?")
+    return jsonify(response)
 
 
 
