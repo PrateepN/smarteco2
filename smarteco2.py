@@ -37,7 +37,7 @@ def launch():
     return statement("Welcome to the requests demo")
 
 
-@ask.intent("HelloIntent")
+@ask.intent("Premium_Intent")
 def hello():
     return question("Who do you want me to say hello to?")
 
