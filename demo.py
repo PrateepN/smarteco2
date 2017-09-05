@@ -11,13 +11,14 @@ ask = Ask(app, "/")
 def launch():
     return statement("Welcome to the requests demo")
 
-response="We are working on that"
+speech="We are working on that"
 	
 @ask.intent("Premium_amount")
 def hello():
     response = app.response_class(
         response=json.dumps(data),
         status=200,
+		speech: speech,
         mimetype='application/json'
     )
     return response
