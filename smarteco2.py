@@ -31,21 +31,12 @@ def webhook():
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
     return r
-	
-	
-def makeWebhookResult():
-    speech = "Today we will finish this."
-    print("Response:")
-    print(speech)
-    return {
-        "speech": speech,
-        "displayText": speech,
-        # "data": data,
-        # "contextOut": [],
-        #"source": "apiai-weather-webhook-sample"
-    }
 
-    
+@ask.launch
+def launched():
+    return question('Welcome to Foo')	
+	
+
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
