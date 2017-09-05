@@ -22,9 +22,7 @@ def hello():
     return question("Who do you want me to say hello to?")
 
 
-@ask.intent("AMAZON.StopIntent")
-def stop():
-    return statement("Stopping")
+
 	
 	
 if __name__ == '__main__':
