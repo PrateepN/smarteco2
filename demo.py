@@ -11,9 +11,11 @@ ask = Ask(app, "/")
 def launch():
     return statement("Welcome to the requests demo")
 
-
+response="We are working on that"
+	
 @ask.intent("Premium_amount")
 def hello():
+	print(json.dumps(response))
     return question("Who do you want me to say hello to?")
 
 
