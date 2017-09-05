@@ -34,12 +34,9 @@ def webhook():
 	
 	
 def makeWebhookResult():
-    
     speech = "Today we will finish this."
-
     print("Response:")
     print(speech)
-
     return {
         "speech": speech,
         "displayText": speech,
@@ -51,7 +48,7 @@ def makeWebhookResult():
     
 
 if __name__ == '__main__':
-    port = int(os.getenv('PORT', 8000))
+    port = int(os.getenv('PORT', 5000))
 
     print("Starting app on port %d" % port)
 
