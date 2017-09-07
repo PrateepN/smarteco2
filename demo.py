@@ -1,8 +1,14 @@
 import logging
 
-from flask import Flask
+from flask import Flask, request
+from flask_restful import Resource, Api
+from sqlalchemy import create_engine
+from json import dumps
+from flask.ext.jsonpify import jsonify
+
+
 from flask_ask import Ask, statement, question
-from flask import jsonify
+
 
 app = Flask(__name__)
 @app.route('/webhook2', methods=['POST'])
